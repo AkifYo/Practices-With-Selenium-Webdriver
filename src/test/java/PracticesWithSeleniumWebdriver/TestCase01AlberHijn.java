@@ -1,6 +1,5 @@
 package PracticesWithSeleniumWebdriver;
 
-import com.google.common.base.Verify;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -8,13 +7,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class TestCase01 {
+public class TestCase01AlberHijn {
 
 
     @Test
@@ -48,7 +45,7 @@ public class TestCase01 {
         userNameTextBox.sendKeys("akyor06@hotmail.com");
         userNameTextBox.sendKeys(Keys.TAB);
         WebElement passwordTextBox = driver.findElement(By.id("password"));
-        passwordTextBox.sendKeys("Ny233134..");
+        passwordTextBox.sendKeys("00000");
         passwordTextBox.sendKeys(Keys.TAB);
         action.sendKeys(Keys.TAB);
         WebElement logBtn = driver.findElement(By.xpath("//button[@data-testhook='login-form-submit']"));
