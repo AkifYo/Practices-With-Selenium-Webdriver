@@ -1,4 +1,4 @@
-package PracticesWithSeleniumWebdriver;
+package P01_PracticesWithSeleniumWebdriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

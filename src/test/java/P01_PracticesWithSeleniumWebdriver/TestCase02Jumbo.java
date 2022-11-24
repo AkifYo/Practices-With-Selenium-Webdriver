@@ -1,4 +1,4 @@
-package PracticesWithSeleniumWebdriver;
+package P01_PracticesWithSeleniumWebdriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -9,7 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
-import javax.swing.*;
 import java.time.Duration;
 
 public class TestCase02Jumbo {
