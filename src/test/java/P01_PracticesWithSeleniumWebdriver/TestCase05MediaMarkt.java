@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.List;
 
-public class TesteCase05MediaMarkt {
+public class TestCase05MediaMarkt {
     @Test
     public void testMediMarkt (){
         WebDriverManager.chromedriver().setup();
