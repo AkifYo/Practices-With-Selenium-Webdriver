@@ -16,8 +16,8 @@ public class SendKeys {
     public static void main(String[] args) throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
+
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get("https://www.mediamarkt.nl/");
 
         Actions action= new Actions(driver);
@@ -29,7 +29,29 @@ public class SendKeys {
         srcBx.sendKeys("afzuigkap");
         action.sendKeys(srcBx, Keys.ENTER).perform();
         Thread.sleep(2000);
-        Price_Method.priceRange("50","500");
+        WebElement minPrice= driver.findElement(By.cssSelector("input[name='min']"));
+        String str= minPrice.getAttribute("value");
+        System.out.println(str);
+        //System.out.println(minPrice.getAttribute("value"));
+        minPrice.click();
+        for (int i = 0; i < 3; i++) {
+            minPrice.sendKeys(Keys.BACK_SPACE);
+        }
+
+        minPrice.sendKeys("150");
+
+        WebElement maxPrice= driver.findElement(By.xpath("(//input[@class='StyledInputMask-sc-6brnnh-3 eQMVTh'])[2]"));
+        //System.out.println(maxPrice.getAttribute("value"));
+        Thread.sleep(1000);
+        maxPrice.click();
+
+        Thread.sleep(1000);
+        for (int i = 0; i < 5; i++) {
+            maxPrice.sendKeys(Keys.BACK_SPACE);
+        }
+        maxPrice.sendKeys("250");
+        maxPrice.sendKeys(Keys.ENTER);
+        //driver.quit();
 
     }
 

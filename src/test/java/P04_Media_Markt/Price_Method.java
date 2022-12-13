@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Price_Method {
     public static void priceRange(String firstP, String secondP){
-        WebDriverManager.chromedriver().setup();
+
         WebDriver driver = new ChromeDriver();
         WebElement minPrice= driver.findElement(By.cssSelector("input[name='min']"));
         minPrice.sendKeys(firstP);

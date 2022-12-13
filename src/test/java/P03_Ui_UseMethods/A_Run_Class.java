@@ -5,9 +5,9 @@ public class A_Run_Class {
         B_FirstMethods.setUp();
         B_FirstMethods.cookiesHandle();
         C_Search_Box.searchText("google");
-        //D_Price.priceControl("100","1500");
-       E_Review.chooseStars(4);
-        Thread.sleep(5000);
+        D_Price.priceControl("100","1500");
+        E_Review.chooseStars(3);
+        Thread.sleep(3000);
         F_Products_Title.firstPageProducts();
         B_FirstMethods.finishTest();
     }
