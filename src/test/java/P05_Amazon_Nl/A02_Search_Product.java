@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 public class A02_Search_Product {
     public static  void searchProduct(String productName){
-        WebElement srcBox=A01_SetUp.driver.findElement(By.xpath("//input[@id='nav-bb-search']"));
+        WebElement srcBox=A01_SetUp.driver.findElement(By.id("twotabsearchtextbox"));
         srcBox.click();
         srcBox.sendKeys(productName);
         srcBox.sendKeys(Keys.ENTER);

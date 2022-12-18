@@ -15,6 +15,7 @@ public class A01_SetUp {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("https://www.amazon.nl/");
+        driver.manage().window().maximize();
     }
     public static void cookiesHandle(){
         driver.findElement(By.id("sp-cc-accept")).click();
