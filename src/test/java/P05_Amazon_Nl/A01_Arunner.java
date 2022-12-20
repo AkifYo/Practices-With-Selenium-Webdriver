@@ -8,7 +8,8 @@ public class A01_Arunner {
         A02_Search_Product.searchProduct("galaxy a04");
 
         Thread.sleep(3000);
-        A03_Review_Stars.reviewStar(1);
+        A03_Review_Stars.reviewStar(4);
+        A04_FindMark.findMark(4);
         A01_SetUp.finishTest();
     }
 }
