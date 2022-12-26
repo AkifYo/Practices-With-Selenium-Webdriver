@@ -31,8 +31,8 @@ public class A01_Booking {
     }
     @Test
     public void srcBxSrc() throws InterruptedException {
-        placeToGo("milan");
-        choosingDate("2022-12-28","2023-01-05");
+        placeToGo("amsterdam");
+        choosingDate("2022-12-28","2023-01-03");
         chooseTheAmountPerson(3,3,3);
     }
 
@@ -60,6 +60,7 @@ public class A01_Booking {
     }
     public void chooseTheAmountPerson(int adult, int child, int room) throws InterruptedException {
 
+        Thread.sleep(2000);
         WebElement personAmount = driver.findElement(By.xpath("//button[@data-testid='occupancy-config']"));
         personAmount.click();
         WebElement adultPlus= driver.findElement(By.xpath("(//button[@class='fc63351294 a822bdf511 e3c025e003 fa565176a8 f7db01295e e1b7cfea84 d64a4ea64d'])[1]"));
