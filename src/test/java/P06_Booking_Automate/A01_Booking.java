@@ -31,9 +31,9 @@ public class A01_Booking {
     }
     @Test
     public void srcBxSrc() throws InterruptedException {
-        placeToGo("mardin");
-        choosingDate("2022-12-28","2023-01-31");
-        chooseTheAmountPerson(2,2,2);
+        placeToGo("milan");
+        choosingDate("2022-12-28","2023-01-05");
+        chooseTheAmountPerson(3,3,3);
     }
 
 
@@ -74,7 +74,7 @@ public class A01_Booking {
         }
         Thread.sleep(2000);
         WebElement roomPlus= driver.findElement(By.xpath("(//button[@class='fc63351294 a822bdf511 e3c025e003 fa565176a8 f7db01295e e1b7cfea84 d64a4ea64d'])[3]"));
-        for (int i = 0; i <room ; i++) {
+        for (int i = 1; i <room ; i++) {
             roomPlus.click();
         }
         driver.findElement(By.xpath("//button[@class='fc63351294 a822bdf511 e2b4ffd73d f7db01295e af18dbd5a4 a9a04704ee d285d0ebe9']")).click();
