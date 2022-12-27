@@ -62,7 +62,7 @@ public class A01_Booking {
 
         Thread.sleep(2000);
         WebElement personAmount = driver.findElement(By.xpath("//button[@data-testid='occupancy-config']"));
-        personAmount.click();
+        //personAmount.click();
         WebElement adultPlus= driver.findElement(By.xpath("(//button[@class='fc63351294 a822bdf511 e3c025e003 fa565176a8 f7db01295e e1b7cfea84 d64a4ea64d'])[1]"));
 
         for (int i = 2; i < adult; i++) {
