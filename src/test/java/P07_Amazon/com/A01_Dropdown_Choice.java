@@ -2,6 +2,7 @@ package P07_Amazon.com;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -36,5 +37,10 @@ public class A01_Dropdown_Choice {
         //select.selectByVisibleText("Beauty & Personal Care");
         select.selectByIndex(4);
         Thread.sleep(3000);
+        int optionsNum=select.getOptions().size();
+        int expectedOpSize= 28;
+        Assert.assertEquals(optionsNum,expectedOpSize);
+        System.out.println(optionsNum);
+
     }
 }
