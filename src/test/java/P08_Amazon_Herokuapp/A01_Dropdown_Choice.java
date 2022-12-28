@@ -1,4 +1,4 @@
-package P07_Amazon.com;
+package P08_Amazon_Herokuapp;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
