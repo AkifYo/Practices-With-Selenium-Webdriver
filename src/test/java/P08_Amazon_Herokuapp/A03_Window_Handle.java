@@ -1,13 +1,16 @@
 package P08_Amazon_Herokuapp;
 
 import Utilities.SetUp;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WindowType;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 public class A03_Window_Handle extends SetUp {
     @Test
     public void test01(){
+
         //firs we are going to amazon.com
         driver.get("https://amazon.com");
         // then we are going to bbc.com
