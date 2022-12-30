@@ -1,7 +1,7 @@
 package Utilities;
 
 public class ReuseableMethod {
-    public void wait(int second){
+    public static void wait(int second){
         try {
             Thread.sleep(second*1000);
         } catch (InterruptedException e) {

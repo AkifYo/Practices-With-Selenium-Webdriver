@@ -20,7 +20,7 @@ public class SetUp {
     }
     @After
     public void tearDown () throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(1000);
         driver.quit();
     }
 }
