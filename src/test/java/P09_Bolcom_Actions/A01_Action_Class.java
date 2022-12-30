@@ -1,7 +1,7 @@
 package P09_Bolcom_Actions;
 
 import Utilities.ReuseableMethod;
-import Utilities.SetUp;
+import Utilities.TestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class A01_Action_Class extends SetUp {
+public class A01_Action_Class extends TestBase {
     @Test
     public void test01(){
         // go to bol.com

@@ -1,6 +1,6 @@
 package P08_Amazon_Herokuapp;
 
-import Utilities.SetUp;
+import Utilities.TestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import java.util.Set;
 
-public class A04_Window_Handle extends SetUp {
+public class A04_Window_Handle extends TestBase {
     @Test
     public void test02(){
         WebDriverManager.chromedriver().setup();

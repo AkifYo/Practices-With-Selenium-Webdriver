@@ -1,13 +1,11 @@
 package P08_Amazon_Herokuapp;
 
-import Utilities.SetUp;
-import io.github.bonigarcia.wdm.WebDriverManager;
+import Utilities.TestBase;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WindowType;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-public class A03_Window_Handle extends SetUp {
+public class A03_Window_Handle extends TestBase {
     @Test
     public void test01(){
 

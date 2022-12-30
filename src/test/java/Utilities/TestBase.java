@@ -8,19 +8,21 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class SetUp {
+public class TestBase {
 
-   protected WebDriver driver;
+    protected WebDriver driver;
+
     @Before
-    public void setUp(){
+    public  void setUp() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
         driver= new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
+        Thread.sleep(3000);
     }
     @After
-    public void tearDown () throws InterruptedException {
-        Thread.sleep(1000);
+    public   void tearDown() throws InterruptedException {
+        Thread.sleep(3000);
         driver.quit();
     }
 }
