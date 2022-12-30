@@ -30,21 +30,21 @@ public class A02_KeyBoard_Actions extends TestBase {
         ReuseableMethod.wait(2);
         Actions actions= new Actions(driver);
         // search  the text Pixel 6A
-        actions.moveToElement(srcBx)
-                .sendKeys(Keys.DOWN)
+        actions.click(srcBx)
+                .keyDown(Keys.SHIFT)
                 .sendKeys("p")
-                .sendKeys(Keys.UP)
+                .keyUp(Keys.SHIFT)
                 .sendKeys("ixel 6")
-                .sendKeys(Keys.DOWN)
+                .keyDown(Keys.SHIFT)
                 .sendKeys("a")
-                .sendKeys(Keys.UP)
+                .keyUp(Keys.SHIFT)
                 .sendKeys(Keys.ENTER)
                 .perform();
         ReuseableMethod.wait(2);
         //test the resul if it has Pixel 7A
         String actualTx= driver.findElement(By.xpath("//h1[@data-test='page-title']")).getText();
         String expectedTx="Pixel 6A";
-        Assert.assertEquals(actualTx,expectedTx);
+        Assert.assertTrue(actualTx.contains(expectedTx));
         ReuseableMethod.wait(2);
 
 
