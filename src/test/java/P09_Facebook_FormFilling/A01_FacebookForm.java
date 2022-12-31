@@ -27,43 +27,26 @@ public class A01_FacebookForm extends TestBase {
         WebElement firstNameTxBox=driver.findElement(By.xpath("//input[@name='firstname']"));
         Actions actions= new Actions(driver);
         actions.sendKeys("Ali")
-                .keyDown(Keys.TAB)
-                .keyUp(Keys.TAB)
+                .sendKeys(Keys.TAB)
                 .sendKeys("Okuz")
-                .keyDown(Keys.TAB)
-                .keyUp(Keys.TAB)
+                .sendKeys(Keys.TAB)
                 .sendKeys("04507287875")
-                .keyDown(Keys.TAB)
-                .keyUp(Keys.TAB)
+                .sendKeys(Keys.TAB)
                 .sendKeys("Ay233134")
-                .keyDown(Keys.TAB)
-                .keyUp(Keys.TAB)
-                .keyDown(Keys.TAB)
-                .keyUp(Keys.TAB)
-                .sendKeys(Keys.ENTER)
-                .keyDown(Keys.UP)
-                .keyUp(Keys.UP)
-                .sendKeys(Keys.ENTER)
-                .keyDown(Keys.TAB)
-                .keyUp(Keys.TAB)
-                .sendKeys(Keys.ENTER)
-                .keyDown(Keys.UP)
-                .keyUp(Keys.UP)
-                .keyDown(Keys.UP)
-                .keyUp(Keys.UP)
-                .keyDown(Keys.UP)
-                .keyUp(Keys.UP)
-                .keyDown(Keys.UP)
-                .keyUp(Keys.UP)
-                .keyDown(Keys.UP)
-                .keyUp(Keys.UP)
-                .keyDown(Keys.UP)
-                .keyUp(Keys.UP)
-                .sendKeys(Keys.ENTER)
-                .keyDown(Keys.TAB)
-                .keyUp(Keys.TAB)
-                .perform();
-        ReuseableMethod.wait(2);
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)
+                .sendKeys("Oct")
+                .sendKeys(Keys.TAB)
+                .sendKeys("15")
+                .sendKeys(Keys.TAB)
+                .sendKeys("1990")
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.TAB)
+                .sendKeys(Keys.ARROW_RIGHT).perform();
+                driver.findElement(By.xpath("//button[@name='websubmit']")).click();
+
+
+        ReuseableMethod.wait(5);
         driver.quit();
 
     }
