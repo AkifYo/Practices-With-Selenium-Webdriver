@@ -31,9 +31,10 @@ public class A02_Walmart_Send_keys extends TestBase {
       WebElement ifEl= driver.findElement(By.xpath("//div[@id='px-captcha']"));
       //WebElement holdBtn=driver.switchTo().frame(ifEl).findElement(By.xpath("//div[@aria-label='Press & Hold']"));
 
-        ReuseableMethod.wait(10);
+        ReuseableMethod.wait(9);
      actoins.clickAndHold(ifEl); //*[@id="px-captcha"]//iframe[6]
-        ReuseableMethod.wait(3);
+        ReuseableMethod.wait(5);
         //This code failed to reach to mainwebpage
+        // it is hard to recah shadow element
     }
 }
