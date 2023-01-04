@@ -10,6 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
 import java.time.Duration;
+import java.util.List;
 
 public class A03_AirBnb_ScrenShot extends TestBase {
     @Test
@@ -33,7 +34,13 @@ public class A03_AirBnb_ScrenShot extends TestBase {
         Thread.sleep(1000);
         srcBx2.sendKeys("Istanbul");
         srcBx2.submit();
-        //get the title of the first four places to go
+        //get the title of the first three places to go
+        Thread.sleep(3000);
+        List<WebElement> placesOfCard= driver.findElements(By.xpath("//div[@class='t1jojoys dir dir-ltr']"));
+        for (WebElement eachPlace:placesOfCard   ) {
+            System.out.println(eachPlace.getText());
+        }
+        System.out.println(placesOfCard.size());
         Thread.sleep(3000);
         driver.quit();
 
