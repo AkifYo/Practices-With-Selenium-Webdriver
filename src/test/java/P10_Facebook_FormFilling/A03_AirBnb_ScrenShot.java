@@ -2,14 +2,16 @@ package P10_Facebook_FormFilling;
 
 import Utilities.TestBase;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.time.Duration;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class A03_AirBnb_ScrenShot extends TestBase {
@@ -35,6 +37,9 @@ public class A03_AirBnb_ScrenShot extends TestBase {
         srcBx2.sendKeys("Istanbul");
         srcBx2.submit();
         //get the title of the first three places to go
+        screenShot(driver);
+
+
         Thread.sleep(3000);
         List<WebElement> placesOfCard= driver.findElements(By.xpath("//div[@class='t1jojoys dir dir-ltr']"));
         for (WebElement eachPlace:placesOfCard   ) {
@@ -45,5 +50,20 @@ public class A03_AirBnb_ScrenShot extends TestBase {
         driver.quit();
 
 
+    }
+    public void screenShot(WebDriver driver){
+        TakesScreenshot screenshot= (TakesScreenshot) driver;
+        LocalDateTime ldt= LocalDateTime.now();
+        DateTimeFormatter dtf= DateTimeFormatter.ofPattern("yyyyMMdd");
+        String date= ldt.format(dtf);
+        String dosyaYolu="target/Screen/img"+date+".jpeg";
+        File scShot= new File("\"target/Screen/img\"+date+\".jpeg\"");
+        File tmpFile=screenshot.getScreenshotAs(OutputType.FILE);
+
+        try {
+            FileUtils.copyFile(tmpFile,scShot);
+        } catch (Exception e) {
+
+        }
     }
 }
