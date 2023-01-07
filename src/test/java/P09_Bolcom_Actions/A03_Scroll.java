@@ -27,12 +27,14 @@ public class A03_Scroll {
         WebElement footer= driver.findElement(By.xpath("//a[contains(text(),'Huishouden')]"));
 
         actions.scrollToElement(footer).perform();
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         List<WebElement> footerEleList= driver.findElements(By.xpath("//div[@class='navigation-block__column__category  navigation-block__group  accordion__item js_toggle_group']"));
         for (WebElement eachOf:footerEleList
              ) {
             System.out.println(eachOf.getText());
         }
+
+        driver.manage().window().getSize();
         driver.quit();
     }
 }
