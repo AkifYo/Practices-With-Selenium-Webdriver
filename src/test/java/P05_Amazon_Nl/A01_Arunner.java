@@ -14,7 +14,7 @@ public class A01_Arunner {
         Thread.sleep(3000);
         A02_Search_Product.searchProduct("iphone");
         Actions action= new Actions(A01_SetUp.driver);
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         A03_Review_Stars.reviewStar(4);
         A04_FindMark.findMark(3);
         Thread.sleep(2000);

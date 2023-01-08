@@ -14,6 +14,6 @@ public class A04_FindMark {
         marks.click();
         Thread.sleep(2000);
         Actions actions= new Actions(A01_SetUp.driver);
-        actions.scrollByAmount(200,20);
+        actions.scrollByAmount(100,20);
     }
 }

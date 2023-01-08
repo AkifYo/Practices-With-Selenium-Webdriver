@@ -22,7 +22,7 @@ public class A01_SetUp {
     }
 
     public static void finishTest() throws InterruptedException {
-        Thread.sleep(8000);
+        Thread.sleep(5000);
         driver.quit();
     }
 }
