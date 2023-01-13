@@ -30,10 +30,10 @@ public class TestCase01AlberHijn {
 
 //        5. Verify 'Maak nu een profiel aan' is visible
         Actions action = new Actions(driver);
-        WebElement inlogBtn = driver.findElement(By.xpath("//a[@href='/mijn/inloggen']"));
-        action.moveToElement(inlogBtn).perform();
-        inlogBtn.getText();
-        System.out.println(inlogBtn.getText());
+        //WebElement inlogBtn = driver.findElement(By.xpath("//a[@href='/mijn/inloggen']"));
+        //action.moveToElement(inlogBtn).perform();
+        //inlogBtn.getText();
+        //System.out.println(inlogBtn.getText());
         WebElement inlog = driver.findElement(By.xpath("//a[@data-testhook='navigation-login']"));
         inlog.click();
         //6. click to maak een account aan

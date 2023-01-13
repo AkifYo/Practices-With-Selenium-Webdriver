@@ -40,7 +40,7 @@ public class TestCase02Jumbo {
        WebElement userTextBox= driver.findElement(By.xpath("//input[@id='username']"));
        userTextBox.sendKeys("akyor06@hotmail.com");
        WebElement passwordTextBox= driver.findElement(By.xpath("//input[@id='password']"));
-       passwordTextBox.sendKeys("11111");
+       passwordTextBox.sendKeys("34111");
 
        WebElement inBtn= driver.findElement(By.xpath("//button[@data-label='Inloggen']"));
        Actions actions= new Actions(driver);
