@@ -47,7 +47,7 @@ public class TestCase02Jumbo {
        actions.moveToElement(inBtn).click().perform();
 
        WebElement srcBox= driver.findElement(By.xpath("//input[@class='search-bar-input']"));
-       actions.moveToElement(srcBox).click().sendKeys("nutella").sendKeys(Keys.ENTER).perform();
+       actions.moveToElement(srcBox).click().sendKeys("samsung").sendKeys(Keys.ENTER).perform();
        WebElement resultText= driver.findElement(By.xpath("//*[@id=\"__layout\"]/div/div[2]/div/div/div/div[2]/div/div[1]/div/span"));
        System.out.println(resultText.getText());
       driver.quit();
