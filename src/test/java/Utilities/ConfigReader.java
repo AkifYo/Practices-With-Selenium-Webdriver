@@ -20,7 +20,7 @@ public class ConfigReader {
 
 
         } catch (IOException e) {
-            System.out.println("properties dosyasi okunamadi");
+            System.out.println("properties couldnt be read");
 
         }
 
