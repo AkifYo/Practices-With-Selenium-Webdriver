@@ -2,6 +2,7 @@ package Tests.P02_Ui_Testing;
 
 
 
+import Utilities.Driver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -19,13 +20,15 @@ public class A01_Media_Markt_Homepage_ScrollDown {
        WebDriver driver= new ChromeDriver();
        driver.manage().window().maximize();
        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+       // navigate to the homepage
        driver.get("https://www.mediamarkt.nl/");
+       // locate the elements
        driver.findElement(By.xpath("//button[@id='pwa-consent-layer-accept-all-button']")).click();
        Actions actions= new Actions(driver);
 //       JavascriptExecutor jse = (JavascriptExecutor)driver;
 //       jse.executeScript("window.scrollBy(0,250)");
-       WebElement footer= driver.findElement(By.xpath("(//li[@class='StyledLi-sc-25frrw-0 loSpRw'])[9]"));
-       actions.scrollToElement(footer).perform();
+       WebElement footer= Driver.getDriver().findElement(By.xpath("(//li[@class='StyledLi-sc-25frrw-0 loSpRw'])[9]"));
+actions.scrollToElement(footer).perform();
 
 // drag downwards
 
